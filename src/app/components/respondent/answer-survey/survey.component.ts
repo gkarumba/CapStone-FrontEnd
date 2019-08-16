@@ -74,18 +74,6 @@ export class SurveyComponent implements OnInit {
       header.appendChild(span);
       header.appendChild(btn);
     });
-    // surveyModel.onComplete.add((result) => {
-    //     // this.submitSurvey.emit(result.data);
-    //     // this.result = result.data;
-    //     this.submitSurvey.emit(result.data);
-    //   console.log(result.data)
-    //   console.log(this.surveyservice.getCategoryId())
-    //   this.answers['category'] = this.surveyservice.getCategoryId();
-    //   this.answers['school']= this.authService.getUserId();
-    //   this.answers['answer'] = result.data;
-    //   this.onSurveySaved(this.answers);
-    //   }
-    //   );
     surveyModel.onComplete.add((result) => {
       this.submitSurvey.emit(result.data);
       console.log(result.data)
